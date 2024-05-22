@@ -10,8 +10,8 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
 ### Materiais
 - ESP8266: Microcontrolador que será utilizado como núcleo para o funcionamento dos sensores, como também para o envio de dados para o banco de dados.
 - DHT11: Sensor utilizado para medir a temperatura e umidade do ar.
-- 9SS19: Sensor utilizado para medir a umidade do solo.
-- 9SS18: Sensor utilizado para detectar condições climáticas(chuva,neve).
+- 9SS19(FC28): Sensor utilizado para medir a umidade do solo.
+- 9SS18(FC37): Sensor utilizado para detectar condições climáticas(chuva,neve).
 - RS385 (12v): Bomba d'água que será utilizada para irrigação da horta.  
   
  
