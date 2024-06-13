@@ -55,8 +55,8 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
        
        | Pino (Nome no Codigo)  | Numero do Pino | Arquivo de Declaração | Descrição |
        | ------------- | ------------- | ------------- | ------------- |
-       | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-       | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+       | DHTPIN  | GPIO5 - D1  | codigoBase.ino  | Pino de conexão do sensor DHT11  |
+       | FC28PIN  | ADC0 - A0  | codigoBase.ino  | Pino de conexão do sensor FC28  |
 
   
  
