@@ -14,7 +14,7 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
 - 9SS18(FC37): sensor utilizado para detectar condições climáticas(chuva, neve).
 - RS385 (12v): bomba d'água que será utilizada para irrigação da horta.
 - Cabo Micro USB: cabo de conexão utilizado para alimentacao e transmissão de dados.
-- 
+- Fios Jumper: utilizados para realizar a conxão dos componentes de hardware.
 
 ## Esquema de Conexão
 
@@ -50,7 +50,13 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
          - Adafruit MQTT Library
          - Adafruit FONA Library
          - Adafruit BusIO
-
+     - Requisitos de Hardware:
+       - Pinagem:
+       
+       | Pino (Nome no Codigo)  | Numero do Pino | Arquivo de Declaração | Descrição |
+       | ------------- | ------------- | ------------- | ------------- |
+       | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+       | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
 
   
  
