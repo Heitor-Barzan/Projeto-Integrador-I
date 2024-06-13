@@ -7,7 +7,6 @@
 
 Nesta sessão teremos a lista de materiais que serão utilizados durante o procedimento de montagem do projeto, teremos alguns sensores que são vitais para o funcionamento remoto da horta conectados à um ESP que enviará os dados recebidos para um banco de dados em uma nuvem.
 
-### Materiais
 - ESP8266: microcontrolador que será utilizado como núcleo para o funcionamento dos sensores, como também para o envio de dados para o banco de dados.
 - DHT11: sensor utilizado para medir a temperatura e umidade do ar.
 - 9SS19(FC28): sensor utilizado para medir a umidade do solo.
@@ -18,9 +17,9 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
 
 ## Esquema de Conexão
 
-## Instalação
+## Instalação e Configuração do Ambiente de Desenvolvimento
  - Para que o sistema funcione é preciso configurar seu ambiente
-   - Requisitos de Software:
+   - ### Requisitos de Software:
       - Arduino IDE: a Arduino IDE é uma plataforma de código aberto que facilita a escrita e upload de código para placas Arduino. Siga os passos abaixo para instalá-la.
       - Conta na plataforma IoT Adafruit.io: a Adafruit.io é uma plataforma para monitoramento e controle de dispositivos IoT. Você precisará criar uma conta para utilizar suas funcionalidades.
    - Bibliotecas de Software: estas bibliotecas são essenciais para o funcionamento do nosso projeto IoT. Vamos instalar todas elas na Arduino IDE.
@@ -50,15 +49,23 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
          - Adafruit MQTT Library
          - Adafruit FONA Library
          - Adafruit BusIO
-     - Requisitos de Hardware:
-       - Pinagem:
-       
-       | Pino (Nome no Codigo)  | Numero do Pino | Arquivo de Declaração | Descrição |
-       | ------------- | ------------- | ------------- | ------------- |
-       | DHTPIN  | GPIO5 - D1  | codigoBase.ino  | Pino de conexão do sensor DHT11  |
-       | FC28PIN  | ADC0 - A0  | codigoBase.ino  | Pino de conexão do sensor FC28  |
+        
+   - ### Requisitos de Hardware:
+   <details>
+   <summary> Pinagem: </summary>
+     <br>
+    
+     | Pino (Nome no Codigo)  | Numero do Pino | Arquivo de Declaração | Descrição |
+     | ------------- | ------------- | ------------- | ------------- |
+     | DHTPIN  | GPIO5 - D1  | codigoBase.ino  | Pino de conexão do sensor DHT11 |
+     | FC28PIN  | ADC0 - A0  | codigoBase.ino  | Pino de conexão do sensor FC28 |
+     | FC37PIN  | GPIO16 - D0  | codigoBase.ino  | Pino de conexão do sensor FC37 |
+     | RELEPIN  | GPIO4 - D2  | codigoBase.ino  | Pino de conexão do Rele que ativa a bomba de irrigação |
+     - Montagem:
 
-  
+   </details>
+     - Montagem:
+## Diagnostico de Problemas e Soluções:  
  
  
  
