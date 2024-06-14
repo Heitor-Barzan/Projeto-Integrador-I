@@ -2,72 +2,94 @@
  ##  Introdução
 
  Este projeto foi desenvolvido como proposta de trabalho para a matéria Projeto Integrador I na UFSC, o qual propõe um sistema de automatização para uma Horta Medicinal, visando reduzir o processo de cuidados tornando-os menos cansativos, e mais eficientes, tornando o processo de regagem automático, necessitando apenas de uma etapa de configuração por parte do usuário, o qual precisará apenas verificar o funcionamento do sistema.
+ 
+ ## Protótipo do Sistema
+ O prototipo foi pensado para que seja possivel simular o comportamento de uma horta em escala pequena. Os dados recolhidos são são provenientes do ambiente controlado.
 
-##  Lista de Hardware 
+  ### Lista de Materiais Protótipo
+  - Caixa de plástico;
+  - Cola;
+  - Tesoura;
+  - Fita (adesiva ou isolante);
+  - Estilete;
+  - Vaso de planta;
+  - Mangueiras para realizar a irrigação;
+  - Caixa de Madeira de Frutas;
+  - Lona plástica;
+  - Muda de Planta(Alecrim, Manjericão ou Hortelã)
 
-Nesta sessão teremos a lista de materiais que serão utilizados durante o procedimento de montagem do projeto, teremos alguns sensores que são vitais para o funcionamento remoto da horta conectados à um ESP que enviará os dados recebidos para um banco de dados em uma nuvem.
+  ###  Lista de Hardware 
 
-- ESP8266: microcontrolador que será utilizado como núcleo para o funcionamento dos sensores, como também para o envio de dados para o banco de dados.
-- DHT11: sensor utilizado para medir a temperatura e umidade do ar.
-- 9SS19(FC28): sensor utilizado para medir a umidade do solo.
-- 9SS18(FC37): sensor utilizado para detectar condições climáticas(chuva, neve).
-- RS385 (12v): bomba d'água que será utilizada para irrigação da horta.
-- Cabo Micro USB: cabo de conexão utilizado para alimentacao e transmissão de dados.
-- Fios Jumper: utilizados para realizar a conxão dos componentes de hardware.
+  Nesta sessão teremos a lista de materiais que serão utilizados durante o procedimento de montagem do projeto, teremos alguns sensores que são vitais para o funcionamento remoto da horta conectados à um ESP que enviará os dados recebidos para um banco de dados em uma  nuvem.
 
-## Esquema de Conexão
+   - ESP8266: microcontrolador que será utilizado como núcleo para o funcionamento dos sensores, como também para o envio de dados para o banco de dados.
+   - DHT11: sensor utilizado para medir a temperatura e umidade do ar.
+   - 9SS19(FC28): sensor utilizado para medir a umidade do solo.
+   - 9SS18(FC37): sensor utilizado para detectar condições climáticas(chuva, neve).
+   - RS385 (12v): bomba d'água que será utilizada para irrigação da horta.
+   - Cabo Micro USB: cabo de conexão utilizado para alimentacao e transmissão de dados.
+   - Fios Jumper: utilizados para realizar a conxão dos componentes de hardware.
 
-## Instalação e Configuração do Ambiente de Desenvolvimento
- - Para que o sistema funcione é preciso configurar seu ambiente
-   - ### Requisitos de Software:
-      - Arduino IDE: a Arduino IDE é uma plataforma de código aberto que facilita a escrita e upload de código para placas Arduino. Siga os passos abaixo para instalá-la.
-      - Conta na plataforma IoT Adafruit.io: a Adafruit.io é uma plataforma para monitoramento e controle de dispositivos IoT. Você precisará criar uma conta para utilizar suas funcionalidades.
-   - Bibliotecas de Software: estas bibliotecas são essenciais para o funcionamento do nosso projeto IoT. Vamos instalar todas elas na Arduino IDE.
-     - DHT sensor library;
-     - Adafruit Unified Sensor;
-     - Adafruit SleepyDog Library;
-     - Adafruit MQTT Library;
-     - Adafruit FONA Library;
-     - Adafruit BusIO;
-   - Instalação dos Componentes:
-     - Download e Instalação da Arduino IDE:
-       - Acesse o site oficial da Arduino (https://www.arduino.cc/en/software).
-       - Selecione o seu sistema operacional (Windows, Mac OS, Linux) e clique no botão correspondente para fazer o download.
-       - Após o download, abra o instalador e siga as instruções na tela para concluir a instalação.
-     - Criação de Conta no Adafruit.io
-       - Acesse o site do Adafruit.io (https://www.adafruit.com/).
-       - Clique em "Get Started for Free" ou "Sign Up" no canto superior direito.
-       - Preencha os campos solicitados (nome, email, senha) e clique em "Create Account".
-       - Confirme seu email clicando no link enviado pela Adafruit.
-     -  Instalação das Bibliotecas na Arduino IDE
-       - Abra a Arduino IDE.
-       - Vá em Sketch > Include Library > Manage Libraries.
-       - Na janela que se abre, utilize a barra de busca para encontrar e instalar as seguintes bibliotecas:
-         - DHT sensor library
-         - Adafruit Unified Sensor
-         - Adafruit SleepyDog Library
-         - Adafruit MQTT Library
-         - Adafruit FONA Library
-         - Adafruit BusIO
+  ## Esquema de Conexão
+   
+
+ ## Instalação e Configuração do Ambiente de Desenvolvimento
+  - Para que o sistema funcione é preciso configurar seu ambiente
+    - ### Software:
+    <details>
+    <summary> Requisitos de Software: </summary>
+      <br>
+    
+       - Arduino IDE: a Arduino IDE é uma plataforma de código aberto que facilita a escrita e upload de código para placas Arduino. Siga os passos abaixo para instalá-la.
+       - Conta na plataforma IoT Adafruit.io: a Adafruit.io é uma plataforma para monitoramento e controle de dispositivos IoT. Você precisará criar uma conta para utilizar suas funcionalidades.
+    - Bibliotecas de Software: estas bibliotecas são essenciais para o funcionamento do nosso projeto IoT. Vamos instalar todas elas na Arduino IDE.
+      - DHT sensor library;
+      - Adafruit Unified Sensor;
+      - Adafruit SleepyDog Library;
+      - Adafruit MQTT Library;
+      - Adafruit FONA Library;
+      - Adafruit BusIO;
+    - Instalação dos Componentes:
+      - Download e Instalação da Arduino IDE:
+        - Acesse o site oficial da Arduino (https://www.arduino.cc/en/software).
+        - Selecione o seu sistema operacional (Windows, Mac OS, Linux) e clique no botão correspondente para fazer o download.
+        - Após o download, abra o instalador e siga as instruções na tela para concluir a instalação.
+      - Criação de Conta no Adafruit.io
+        - Acesse o site do Adafruit.io (https://www.adafruit.com/).
+        - Clique em "Get Started for Free" ou "Sign Up" no canto superior direito.
+        - Preencha os campos solicitados (nome, email, senha) e clique em "Create Account".
+        - Confirme seu email clicando no link enviado pela Adafruit.
+      -  Instalação das Bibliotecas na Arduino IDE
+        - Abra a Arduino IDE.
+        - Vá em Sketch > Include Library > Manage Libraries.
+        - Na janela que se abre, utilize a barra de busca para encontrar e instalar as seguintes bibliotecas:
+          - DHT sensor library
+          - Adafruit Unified Sensor
+          - Adafruit SleepyDog Library
+          - Adafruit MQTT Library
+          - Adafruit FONA Library
+          - Adafruit BusIO
         
-   - ### Hardware:
-   <details>
-   <summary> Requisitos de Hardware: </summary>
-     <br>
+    </details>
+        
+    - ### Hardware:
+    <details>
+    <summary> Requisitos de Hardware: </summary>
+      <br>
 
-   - Pinagem:
+    - Pinagem:
        
-     | Pino (Nome no Codigo)  | Numero do Pino | Arquivo de Declaração | Descrição |
-     | ------------- | ------------- | ------------- | ------------- |
-     | DHTPIN  | GPIO5 - D1  | codigoBase.ino  | Pino de conexão do sensor DHT11 |
-     | FC28PIN  | ADC0 - A0  | codigoBase.ino  | Pino de conexão do sensor FC28 |
-     | FC37PIN  | GPIO16 - D0  | codigoBase.ino  | Pino de conexão do sensor FC37 |
-     | RELEPIN  | GPIO4 - D2  | codigoBase.ino  | Pino de conexão do Rele que ativa a bomba de irrigação |
-     - Montagem:
+      | Pino (Nome no Codigo)  | Numero do Pino | Arquivo de Declaração | Descrição |
+      | ------------- | ------------- | ------------- | ------------- |
+      | DHTPIN  | GPIO5 - D1  | codigoBase.ino  | Pino de conexão do sensor DHT11 |
+      | FC28PIN  | ADC0 - A0  | codigoBase.ino  | Pino de conexão do sensor FC28 |
+      | FC37PIN  | GPIO16 - D0  | codigoBase.ino  | Pino de conexão do sensor FC37 |
+      | RELEPIN  | GPIO4 - D2  | codigoBase.ino  | Pino de conexão do Rele que ativa a bomba de irrigação |
+    - Montagem:
 
-   </details>
+    </details>
      
-## Diagnostico de Problemas e Soluções:  
+ ## Diagnostico de Problemas e Soluções:  
  
  
  
