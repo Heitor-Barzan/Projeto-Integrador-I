@@ -50,11 +50,13 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
          - Adafruit FONA Library
          - Adafruit BusIO
         
-   - ### Requisitos de Hardware:
+   - ### Hardware:
    <details>
-   <summary> Pinagem: </summary>
+   <summary> Requisitos de Hardware: </summary>
      <br>
-    
+
+   - Pinagem:
+       
      | Pino (Nome no Codigo)  | Numero do Pino | Arquivo de Declaração | Descrição |
      | ------------- | ------------- | ------------- | ------------- |
      | DHTPIN  | GPIO5 - D1  | codigoBase.ino  | Pino de conexão do sensor DHT11 |
@@ -64,7 +66,7 @@ Nesta sessão teremos a lista de materiais que serão utilizados durante o proce
      - Montagem:
 
    </details>
-     - Montagem:
+     
 ## Diagnostico de Problemas e Soluções:  
  
  
