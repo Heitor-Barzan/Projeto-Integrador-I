@@ -32,7 +32,7 @@
 
   ## Esquema de Conexão,
 
-  ![Esquema de Conexão.](/Assets/Images/Diagrama em branco.pdf)
+  ![Esquema de Conexão.](/Assets/Images/diagramaConexao.pdf)
    
 
  ## Instalação e Configuração do Ambiente de Desenvolvimento
