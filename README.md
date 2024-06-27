@@ -30,7 +30,7 @@
    - Cabo Micro USB: cabo de conexão utilizado para alimentacao e transmissão de dados.
    - Fios Jumper: utilizados para realizar a conxão dos componentes de hardware.
 
-  ## Esquema de Conexão,
+  ## Esquema de Conexão
 
   ![Esquema de Conexão.](/Assets/Images/diagramaConexao2.png)
    
