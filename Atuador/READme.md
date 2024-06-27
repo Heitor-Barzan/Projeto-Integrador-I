@@ -4,7 +4,8 @@
 A mini bomba de agua será usada para a irrigacão, controlada pelo modulo rele. A mini bomba de agua tem a capacidade de elevar a agua ate 3 metros e aspirar ate 2 metros de profundidade. A quantidade de agua impulsionada e de 80 a 120 litros por hora. O modulo rele funciona 
 
  
-<img src="/Atuador/" />
+<img src="/Atuador/MiniBomba.png" height="400" width="400"/>
+<img src="/Atuador/ModuloRele.png" height="400" width="460"/>
 
 ## Especificações e características da mini bomba de água:
 - Tensão de operação: 9 V;
@@ -36,10 +37,9 @@ A mini bomba de agua será usada para a irrigacão, controlada pelo modulo rele.
 ## Pinagem do Modulo Relé
 | Pino | Saida | Pino ESP8266 |
 | ------------- | ------------- | ------------- |
-| VCC  | 1 | 33V  |
-| DATA  | 2 | GPIO5 - D1  |
-| N/C  | 3 | NC |
-| GND  | 4 | GND  |
+| DATA  | 1 | GPIO4 - D2  |
+| VCC  | 2 | 33V  |
+| GND  | 3 | GND  |
 
 ## Bibliotecas:
 
