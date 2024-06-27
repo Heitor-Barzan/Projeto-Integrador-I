@@ -16,5 +16,15 @@
 - Tempo de resposta: 2s.
 
 
-## Especificações e características:
+## Datasheet:
 
+[Datasheet DHT11](/Sensores/DHT11/DHT11.pdf)
+
+
+## Pinagem
+| Pino | Saida | Pino ESP8266 |
+| ------------- | ------------- | ------------- |
+| VCC  | 1 | 33V  |
+| DATA  | 2 | D4  |
+| N/C  | 3 | NC |
+| GND  | 4 | GND  |
