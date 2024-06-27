@@ -24,7 +24,7 @@
 | Pino | Saida | Pino ESP8266 |
 | ------------- | ------------- | ------------- |
 | VCC  | 1 | 33V  |
-| DATA  | 2 | D4  |
+| DATA  | 2 | ADC0 - A0  |
 | N/C  | 3 | NC |
 | GND  | 4 | GND  |
 
