@@ -1,3 +1,7 @@
+# DHT11 - Sensor de Humidade do Ar e Temperatura Atmosferica:
+
+## Descrição de Uso:
+- O sensor DHT11 é usado no sistema da horta automatizada para que sejam captados os dados da temperatura e humidade atmosferica. Ele é posicionado no lado de fora proximo as plantas para que possa atuar de maneira eficiente.
 
 ## Especificações e características:
 - Tensão de operação: 3,5 a 5,5VDC;
