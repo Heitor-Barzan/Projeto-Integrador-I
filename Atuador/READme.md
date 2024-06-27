@@ -6,21 +6,34 @@ A mini bomba de agua será usada para a irrigacão, controlada pelo modulo rele.
  
 <img src="/Atuador/" />
 
-## Especificações e características:
+## Especificações e características da mini bomba de água:
 - Tensão de operação: 9 V;
 - Corrente Sem Carga:	600 mA;
 - Corrente Com Carga:	2 A;
 - Vazão:	de até 2L/min;
 - Elevação Máxima da Coluna:	3 metros;
-- Medidas - Tubos de Entrada / Saída
-- Diâmetro Externo: 7,5 mm
-- Diâmetro Interno: 5,0 mm
+- Medidas - Tubos de Entrada / Saída;
+ - Diâmetro Externo: 7,5 mm;
+ - Diâmetro Interno: 5,0 mm;
 
-## Datasheet:
+## Especificações e características do módulo relé:
+- Modelo: JQC3F-C;
+- Pinos: SIG/VCC/GND;
+- Carga nominal: 10A 250VAC/ 10A 125VAC/ 10A 30VDC/ 10A 28VDC;
+- Tensão de operação: 5VDC (VCC);
+- Tensão de sinal: TTL 5VCD ;
+- Saídas: Contato reversível NA (normal aberto), NF (normal fechado), C (comum);
+- Corrente por canal: até 10A;
+- Dimensões totais (CxLxA): 34x26x17mm;
+- Peso com embalagem: 13g.
+
+## Datasheets:
 
 [Datasheet Mini Bomba](/Atuador/)
 
-## Pinagem
+[Datasheet Módulo Relé](/Atuador/)
+
+## Pinagem do Modulo Relé
 | Pino | Saida | Pino ESP8266 |
 | ------------- | ------------- | ------------- |
 | VCC  | 1 | 33V  |
