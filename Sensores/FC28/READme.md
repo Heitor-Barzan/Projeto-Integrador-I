@@ -1,7 +1,7 @@
 # FC28 - Sensor de Humidade do Solo:
 
 ## Descrição de Uso:
-- O sensor FC28 é usado no sistema da horta automatizada para que sejam captados os dados da humidade do solo. Ele é posicionado no solo em que as plantas sao plantadas para que com base no resultado da humidade ele permita a ativação do atuador.
+- O sensor FC28 é usado no sistema da horta automatizada para que sejam captados os dados da humidade do solo. Ele é posicionado no solo junto as plantas para que com base no resultado da humidade ele permita a ativação do atuador.
  
 <img src="/Sensores/FC28/FC28_PinOut.png"  />
 
@@ -25,8 +25,8 @@
 | ------------- | ------------- | ------------- |
 | Analog Data  | 1 | ADC0 - A0 |
 | Digital Data | 2 | N/C |
-| VCC  | 3 | 33V  |
 | GND  | 4 | GND  |
+| VCC  | 3 | 33V  |
 
 ## Bibliotecas:
 
