@@ -3,7 +3,7 @@
 ## Descrição de Uso:
 - O sensor FC28 é usado no sistema da horta automatizada para que sejam captados os dados da humidade do solo. Ele é posicionado no solo em que as plantas sao plantadas para que com base no resultado da humidade ele permita a ativação do atuador.
  
-<img src="/Sensores/FC28/FC28_PinOut.png"  />
+<img src="/Sensores/FC37/FC37_PinOut.png"  />
 
 ## Especificações e características:
 - Tensão de operação: 3,5 a 5,5V DC;
