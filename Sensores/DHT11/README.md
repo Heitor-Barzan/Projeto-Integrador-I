@@ -31,6 +31,8 @@
 
 ## Bibliotecas:
 
+- DHT sensor library
+
 ## Codigo:
 
 ```C++
