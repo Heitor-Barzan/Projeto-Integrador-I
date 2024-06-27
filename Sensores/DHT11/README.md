@@ -14,3 +14,7 @@
 - Precisão (umidade): ±5%;
 - Precisão (temperatura): ±2º celsius;
 - Tempo de resposta: 2s.
+
+
+## Especificações e características:
+
