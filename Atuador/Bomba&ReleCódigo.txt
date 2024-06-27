@@ -1,0 +1,109 @@
+#include <ESP8266WiFi.h>
+#include <Adafruit_MQTT.h>
+#include <Adafruit_MQTT_Client.h>
+//#include "Adafruit_IO_Client.h"
+
+// Defina suas credenciais de WiFi
+#define WIFI_SSID "Nena_Kode"
+#define WIFI_PASS "Teresa27"
+
+// Defina suas credenciais da Adafruit IO
+#define AIO_SERVER "io.adafruit.com"
+#define AIO_SERVERPORT 1883
+#define AIO_USERNAME ""
+#define AIO_KEY ""
+
+// Defina o feed do Adafruit IO
+#define AIO_FEED        AIO_USERNAME "/feeds/umidade-solo"
+
+// Configuração do cliente WiFi e MQTT
+WiFiClient client;
+Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
+Adafruit_MQTT_Publish umidadePub = Adafruit_MQTT_Publish(&mqtt, AIO_FEED);
+
+
+// Feeds Adafruit IO
+Adafruit_MQTT_Publish soil_moisture_feed = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/soil-moisture");
+Adafruit_MQTT_Subscribe pump_control_feed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/pump-control");
+
+// Função de conexão WiFi
+void connectWiFi() {
+  Serial.print("Connecting to ");
+  Serial.println(WIFI_SSID);
+
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+Serial.println();
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
+
+// Função de conexão MQTT
+void connectMQTT() {
+  int8_t ret;
+
+  // Tente conectar ao servidor MQTT
+  if (mqtt.connected()) {
+    return;
+  }
+
+  Serial.print("Connecting to MQTT... ");
+
+  while ((ret = mqtt.connect()) != 0) { // conectar retorna 0 se a conexão for bem sucedida
+    Serial.println(mqtt.connectErrorString(ret));
+    Serial.println("Retrying MQTT connection in 5 seconds...");
+    mqtt.disconnect();
+    delay(5000); // espera 5 segundos antes de tentar novamente
+  }
+
+  Serial.println("MQTT Connected!");
+}
+
+int PinoAnalogico = A0; // Define o pino 13 como Pino Analógico do sensor
+int PinoDigital = 4; // Define pino D14 como Pino Digital do Sensor 
+
+int Rele = 5; // Pino Digital D1 como Relé
+
+int EstadoSensor = 0;
+int UltimoEstSensor = 0;
+
+int  ValAnalogIn; // Valor analógico no código
+
+void setup() {
+
+Serial.begin(9600); 
+pinMode(Rele, OUTPUT); // Declara o Rele como Saída Digital 
+
+pinMode(PinoDigital, INPUT);
+}
+void loop() {
+
+
+ValAnalogIn = analogRead(PinoAnalogico);
+Serial.print (ValAnalogIn);
+int Porcento = map(ValAnalogIn, 1023, 0, 0, 100); // Traforma o valor analógico em porcentagem
+
+Serial.print("Umidade: "); // Imprime o símbolo no valor
+Serial.print(Porcento); // Imprime o valor em Porcentagem no monitor Serial
+Serial.println("%");
+
+if (Porcento <= 76) { // Se a porcentagem for menor ou igual à 76%.
+ 
+Serial.println("Irrigando Planta"); // Imprime no monitor serial
+digitalWrite(Rele, LOW); // Aciona Relé
+
+}else { // Caso contrario 
+ 
+Serial.println("Planta Irrigada"); // Imprime a no monitor serial
+digitalWrite(Rele, HIGH); // Desliga Relé
+
+delay (5000);
+}
+}
