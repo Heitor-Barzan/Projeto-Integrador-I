@@ -18,7 +18,7 @@
 
 ## Datasheet:
 
-[Datasheet DHT11](/Sensores/DHT11/DHT11.pdf)
+[Datasheet DHT11](/Sensores/DHT11/DHT11.PDF)
 
 
 ## Pinagem
