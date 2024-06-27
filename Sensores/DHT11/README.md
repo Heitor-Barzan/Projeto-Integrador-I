@@ -2,8 +2,8 @@
 
 ## Descrição de Uso:
 - O sensor DHT11 é usado no sistema da horta automatizada para que sejam captados os dados da temperatura e humidade atmosferica. Ele é posicionado no lado de fora proximo as plantas para que possa atuar de maneira eficiente.
-
-  ![DHT11_Sensor.](/Sensores/DHT11/DHT11_PIN.png)
+ 
+<img src="/Sensores/DHT11/DHT11_PIN.png" width="400" height="400" />
 
 ## Especificações e características:
 - Tensão de operação: 3,5 a 5,5VDC;
