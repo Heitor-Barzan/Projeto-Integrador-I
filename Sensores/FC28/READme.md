@@ -23,9 +23,9 @@
 ## Pinagem
 | Pino | Saida | Pino ESP8266 |
 | ------------- | ------------- | ------------- |
-| Analog Data  | 1 | 33V  |
-| Digital Data | 2 | ADC0 - A0  |
-| VCC  | 3 | NC |
+| Analog Data  | 1 | ADC0 - A0 |
+| Digital Data | 2 | N/C |
+| VCC  | 3 | 33V  |
 | GND  | 4 | GND  |
 
 ## Bibliotecas:
