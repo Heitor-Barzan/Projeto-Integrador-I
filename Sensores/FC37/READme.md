@@ -1,32 +1,29 @@
-# FC28 - Sensor de Humidade do Solo:
+# FC37 - Sensor de Chuva:
 
 ## Descrição de Uso:
-- O sensor FC28 é usado no sistema da horta automatizada para que sejam captados os dados da humidade do solo. Ele é posicionado no solo em que as plantas sao plantadas para que com base no resultado da humidade ele permita a ativação do atuador.
+- O sensor FC37 é usado no sistema da horta automatizada para que sejam captados os dados relativos a prenseça de chuva. Ele é posicionado no exterior do prototipo para que com base na leitura dos dados ele permita a ativação do atuador.
  
 <img src="/Sensores/FC37/FC37_PinOut.png"  />
 
 ## Especificações e características:
-- Tensão de operação: 3,5 a 5,5V DC;
-- Corrente de operação: 15mA;
-- Output Digital – 0V to 5V;
-- Output Analog – 0V to 5V;
-- LEDs de indicação de output e nivel de potencia;
-- Tamanho da PCB: 3.2cm x 1.4cm;
-- Design baseado no LM393;
-
+- Tensão de operação: 3.3V–5V;
+- Dois modos de output: analogico and digital;
+- Medida da PCB: 30x15mm
+- Medida do Sensor: 54x39mm
+- Sensibilidade ajustavel por potenciomentro;
 
 ## Datasheet:
 
-[Datasheet FC28](/Sensores/)
+[Datasheet FC37](/Sensores/)
 
 
 ## Pinagem
 | Pino | Saida | Pino ESP8266 |
 | ------------- | ------------- | ------------- |
-| Analog Data  | 1 | ADC0 - A0 |
-| Digital Data | 2 | N/C |
-| VCC  | 3 | 33V  |
+| Analog Data  | 1 | N/C |
+| Digital Data | 2 | GPIO16 - D0 |
 | GND  | 4 | GND  |
+| VCC  | 3 | 33V  |
 
 ## Bibliotecas:
 
@@ -35,22 +32,26 @@
 ## Codigo:
 
 ```C++
+int rainPin = A0;
+// you can adjust the threshold value
+int thresholdValue = 500;
+
 void setup(){
- Serial.begin(9600);
- pinMode(2, OUTPUT);
+  pinMode(rainPin, INPUT);
+  Serial.begin(9600);
 }
-void loop(){
- //analog output
- if(analogRead(0)<300) Serial.println("Heavy Rain");
- else if(analogRead(0)<500) Serial.println("Moderate Rain");
- else Serial.println("No Rain");
 
-// //digital output
-// if(digitalRead(2) == HIGH) Serial.println("No Rain
-// Detected");
-// else Serial.println("Rain Detected");
-
- delay(250);
+void loop() {
+  // read the input on analog pin 0:
+  int sensorValue = analogRead(rainPin);
+  Serial.print(sensorValue);
+  if(sensorValue < thresholdValue){
+    Serial.println(" - It's wet");
+  }
+  else {
+    Serial.println(" - It's dry");
+  }
+  delay(500);
 }
 
 ```
