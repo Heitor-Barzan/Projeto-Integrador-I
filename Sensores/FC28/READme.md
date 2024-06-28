@@ -54,3 +54,7 @@ void loop(){
 }
 
 ```
+
+## Montagem:
+
+<img src="/Sensores/FC28/Montagem FC28.png"  />
