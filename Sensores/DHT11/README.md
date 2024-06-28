@@ -62,3 +62,6 @@ void loop()
 
 }
 ```
+## Montagem
+
+<img src="/Sensores/DHT11/Montagem DHT11.png" width="400" height="400" />
