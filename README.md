@@ -34,7 +34,7 @@
 
   ## Esquema de Conexão
 
-![Esquema de Conexão.](/Assets/Images/)
+![Esquema de Conexão.](/Assets/Images/DiagramaCom.png)
 
  ## Instalação e Configuração do Ambiente de Desenvolvimento
   - Para que o sistema funcione é preciso configurar seu ambiente
