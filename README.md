@@ -6,6 +6,8 @@
  ## Protótipo do Sistema
  O prototipo foi pensado para que seja possivel simular o comportamento de uma horta em escala pequena. Os dados recolhidos são são provenientes do ambiente controlado.
 
+  ![Prototipo do Sistema.](/Assets/Images/)
+
   ### Lista de Materiais Protótipo
   - Caixa de plástico;
   - Cola;
@@ -32,8 +34,7 @@
 
   ## Esquema de Conexão
 
-  ![Esquema de Conexão.](/Assets/Images/diagramaConexao2.png)
-   
+![Esquema de Conexão.](/Assets/Images/)
 
  ## Instalação e Configuração do Ambiente de Desenvolvimento
   - Para que o sistema funcione é preciso configurar seu ambiente
@@ -87,11 +88,16 @@
       | FC28PIN  | ADC0 - A0  | codigoBase.ino  | Pino de conexão do sensor FC28 |
       | FC37PIN  | GPIO16 - D0  | codigoBase.ino  | Pino de conexão do sensor FC37 |
       | RELEPIN  | GPIO4 - D2  | codigoBase.ino  | Pino de conexão do Rele que ativa a bomba de irrigação |
+
     - Montagem:
+   
+        ![Esquema de Montagem.](/Assets/Images/diagramaConexao2.png)
 
     </details>
      
  ## Diagnostico de Problemas e Soluções:  
+
+ 
  
  
  
